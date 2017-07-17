@@ -1,0 +1,26 @@
+Poster Topic Area: SysMod
+
+Modelling Transcriptomics Data of the Developing Enteric Nervous System
+-----------------------------------------------------------------------
+The Enteric Nervous System (ENS) comprises in the order of 10^8 cells that
+perform sensory functions, control intestinal muscle movement and regulate
+enzyme secretion. The ENS develops from neural crest cell progenitors that
+proliferate and differentiate to glia and neurons along with the expansion
+of the gastrointestinal tract during development.
+This spatio-temporal self-organisation of the ENS to form a functional
+neural network despite a seemingly disordered distribution of neurons is
+only marginally understood.
+Using transcriptomics, in particular single-cell RNA-Seq data, of enteric
+cells at several developmental time points, we have studied their
+transcriptomic variability and characterised the cellular states
+(e.g. glial and neuronal) by means of marker genes.
+The cross-sectional time series was further investigated by latent vaiable analysis,
+where the latent variable was either a biological process (like 'cell cycle')
+or the internal developmental time modeled as a 'pseudotime'.
+Pseudotime estimation was performed by means of Gaussian Process Latent
+Variable Modelling on the most divergent genes. The model has yielded
+ordering of single cells along the developmental pseudotime line and
+accordingly expression profiles of genes that correlate with lineage
+development in the ENS. The Bayesian model provides not only the most likely
+posterior distribution, but also the associated uncertanties of the estimates.
+

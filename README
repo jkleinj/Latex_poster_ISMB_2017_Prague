@@ -1,0 +1,15 @@
+Latex poster
+------------
+
+Poster prepared for the ISMB 2017 conference in Prague.
+The poster was prepared using the 'latex-beamerposter' package
+and a style file taken from example 03 of that package.
+
+On Ubuntu:
+git clone https://github.com/deselaers/latex-beamerposter.git
+
+apt-get install texlive-full
+git clone https://github.com/jkleinj/Latex_poster.git
+cd Latex_poster
+make
+
