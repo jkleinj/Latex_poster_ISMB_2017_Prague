@@ -49,29 +49,20 @@ This spatio-temporal self-organisation of the ENS to form a functional
 neural network despite a seemingly disordered distribution of neurons is
 only marginally understood.
 Using transcriptomics, in particular single-cell RNA-Seq data, we have studied
-ENS cell lineages at time E13 \cite{Lasrado_2017}.
+ENS cell lineages at embryonic time E13 \cite{Lasrado_2017}.
 More recently we have performed a cross-sectional time series from time E11 to
 the adult to reveal the transcriptomic variability and to characterise cellular
 lineages through their gene expression levels.
 \end{myblock}\vfill
 %______________________________________________________________________________
-\begin{myblock}{Cell Lineage Identification at time E13}
+\begin{myblock}{Cell Lineage Identification at embryonic time E13}
 Key fators of the analysis were the
 progenitor/gliogenic (Erbb3, Sox10, Fabp7,and Plp1) and
 progenitor/neurogenic (Tubb3, Elavl4, Ret and Phox2b )
 marker genes.
 \begin{figure}
-\begin{minipage}{1.0\textwidth}
-	\centering\includegraphics[width=1.0\textwidth]{./heatmap}
-	\caption{Heatmap of single-cell marker gene expression.
-			Cell lineages can be clearly identified through distinct
-			glial and neuronal gene expression patterns.}
-	\label{fig:heatmap}
-\end{minipage}
-\end{figure}
-\begin{figure}
-\begin{minipage}{1.0\textwidth}
-	\includegraphics[width=1.0\textwidth]{./biplot_semisuperv}
+\begin{minipage}{0.9\textwidth}
+	\includegraphics[width=0.9\textwidth]{./biplot_semisuperv}
 	\caption{Biplot of single-cell gene expression. The underlying data set
 		comprises the most divergently expressed genes. The gradient of marker
 		expression is illustrated as colour shade beetween in blue (glial) and
@@ -80,6 +71,22 @@ marker genes.
 		Arrows show the direction and magnitude of marker gene vectors
 		in the given PC1/PC2 plane.}
 	\label{fig:biplot}
+\end{minipage}
+\end{figure}
+\end{myblock}\vfill
+%______________________________________________________________________________
+\begin{myblock}{Detection of Lineage-Specific Genes}
+Using the expression profile of marker genes across all single-cells,
+a linear regression model was applied and the resulting fit was assessed
+by ANOVA. The set of best fitting genes is listed below for the neuronal
+marker Tubb3 and the glial marker Erbb3.
+\begin{figure}
+\begin{minipage}{0.7\textwidth}
+	\subfigure[Tubb3]{\includegraphics[width=0.45\textwidth]{./gbars_Tubb3}}
+	\subfigure[Erbb3]{\includegraphics[width=0.45\textwidth]{./gbars_Erbb3}} \\
+	\caption{Lists of genes with expression profiles similar to those of
+			(a) the neuronal marker Tubb3 and (b) the glial marker Erbb3.}
+	\label{fig:genebars}
 \end{minipage}
 \end{figure}
 \end{myblock}\vfill
@@ -94,35 +101,38 @@ marker genes.
 \begin{minipage}{.98\textwidth}
 \parbox[t][\columnheight]{\textwidth}{
 %______________________________________________________________________________
-\begin{myblock}{Detection of Lineage-Specific Genes}
-Using the expression profile of marker genes across all single-cells,
-a linear regression model was applied and the resulting fit was assessed
-by ANOVA. The set of best fitting genes is listed below for the neuronal
-marker Tubb3 and the glial marker Erbb3.
-\begin{figure}
-\begin{minipage}{0.9\textwidth}
-	\subfigure[Tubb3]{\includegraphics[width=0.45\textwidth]{./gbars_Tubb3}}
-	\subfigure[Erbb3]{\includegraphics[width=0.45\textwidth]{./gbars_Erbb3}} \\
-	\caption{Lists of genes with expression profiles similar to those of
-			(a) the neuronal marker Tubb3 and (b) the glial marker Erbb3.}
-	\label{fig:genebars}
-\end{minipage}
-\end{figure}
-\end{myblock}\vfill
-%______________________________________________________________________________
 \begin{myblock}{Cross-Sectional Time Series}
 
 \begin{figure}
 \begin{minipage}{1.0\textwidth}
-	\centering\includegraphics[width=1.0\textwidth]{./bulk_3d}
+	\centering\includegraphics[width=1.0\textwidth]{./time_series}
 	\caption{3-Dimensional PCA plot of a cross-sectional time series of ENS
-			gene expression. The progression from embryonic cells (blue colours
-			on the left side) at times E11, E13 and E17 to adult cells
-			(gray, orange and yellow) is well resolved. Also the adult cell
-			lineages RET, CHAT and NOS show distinct expression profiles.}
+			gene expression. The progression from embryonic cells (blue colours)
+			at times E11, E13 and E17 to adult cells (gray, orange and yellow)
+			is well resolved. Also the adult cell lineages RET, CHAT and NOS
+			show clearly distinct expression profiles.}
 	\label{fig:timeseries}
 \end{minipage}
 \end{figure}
+\end{myblock}\vfill
+%______________________________________________________________________________
+\begin{myblock}{Psudo-time Estimation}
+\cite{Reid_2016}
+\begin{figure}
+\begin{minipage}{\textwidth}
+	\centering\includegraphics[width=1.0\textwidth]{./bulk_3d}
+	\caption{.}
+	\label{fig:pseudotime}
+\end{minipage}
+\end{figure}
+\end{myblock}\vfill
+%______________________________________________________________________________
+\begin{myblock}{Conclusions}
+Single-cell RNA-Seq data provide a detailed picture of the heterogeneity of
+gene expression within differentiating cell populations of the ENS.
+Gene expression profiles allow for the discriminative analysis of cell lineages
+and the detection of gene clusters. Time-dependent gene expression can be modelled
+as Gaussian Process, which provides an additional predictive dimension.
 \end{myblock}\vfill
 %______________________________________________________________________________
 \begin{myblock}{References}
