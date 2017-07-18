@@ -50,14 +50,14 @@ neural network despite a seemingly disordered distribution of neurons is
 only marginally understood.
 Using transcriptomics, in particular single-cell RNA-Seq data, we have studied
 ENS cell lineages at embryonic time E13 \cite{Lasrado_2017}.
-More recently we have performed a cross-sectional time series from time E11 to
+More recently we have performed a developmental time series from stage E11 to
 the adult to reveal the transcriptomic variability and to characterise cellular
 lineages through their gene expression levels.
 \end{myblock}\vfill
 %______________________________________________________________________________
 \begin{myblock}{Cell Lineage Identification at embryonic time E13}
-Key fators of the analysis were the
-progenitor/gliogenic (Erbb3, Sox10, Fabp7,and Plp1) and
+Key factors of the analysis were the
+progenitor/gliogenic (Erbb3, Sox10, Fabp7 and Plp1) and
 progenitor/neurogenic (Tubb3, Elavl4, Ret and Phox2b )
 marker genes.
 \begin{figure}
@@ -65,7 +65,7 @@ marker genes.
 	\includegraphics[width=0.9\textwidth]{./biplot_semisuperv}
 	\caption{Biplot of single-cell gene expression. The underlying data set
 		comprises the most divergently expressed genes. The gradient of marker
-		expression is illustrated as colour shade beetween in blue (glial) and
+		expression is illustrated as colour shade between in blue (glial) and
 		orange (neuronal).
 		Total marker expression is indicated by the size of the sphere symbol.
 		Arrows show the direction and magnitude of marker gene vectors
@@ -102,26 +102,34 @@ marker Tubb3 and the glial marker Erbb3.
 \parbox[t][\columnheight]{\textwidth}{
 %______________________________________________________________________________
 \begin{myblock}{Cross-Sectional Time Series}
-
+Bulk RNA-Seq data were collected for embryonic stages E11, E13 and E17 and
+for adult lineages RET, CHAT and NOS. A PCA plot resolves all stages/lineages
+in the first three PC dimensions.
 \begin{figure}
 \begin{minipage}{1.0\textwidth}
 	\centering\includegraphics[width=1.0\textwidth]{./time_series}
 	\caption{3-Dimensional PCA plot of a cross-sectional time series of ENS
 			gene expression. The progression from embryonic cells (blue colours)
 			at times E11, E13 and E17 to adult cells (gray, orange and yellow)
-			is well resolved. Also the adult cell lineages RET, CHAT and NOS
-			show clearly distinct expression profiles.}
+			is well resolved. The adult cell lineages RET, CHAT and NOS
+			show very distinct expression profiles.}
 	\label{fig:timeseries}
 \end{minipage}
 \end{figure}
 \end{myblock}\vfill
 %______________________________________________________________________________
-\begin{myblock}{Psudo-time Estimation}
-\cite{Reid_2016}
+\begin{myblock}{Pseudo-time Estimation}
+The temporal behaviour of gene expression can be modeled as a Gaussian Process,
+where a multivariate Gaussian is fitted to a given set of data
+within a Bayesian framework \cite{Reid_2016}. The examples in
+Fig.\ref{fig:pseudotime} illustrate the down-regulation of embryonic neuronal
+genes. The shade around the regression line indicates the prediction uncertainty.
 \begin{figure}
 \begin{minipage}{\textwidth}
-	\centering\includegraphics[width=1.0\textwidth]{./bulk_3d}
-	\caption{.}
+	\subfigure[Tubb3]{\includegraphics[width=0.5\textwidth]{./Tubb3_psitime}}
+	\subfigure[Elavl4]{\includegraphics[width=0.5\textwidth]{./Elavl4_psitime}}
+	\caption{Pseudo-time estimates of the single-cell expression profiles
+			of the marker genes (a) Tubb3 and (b) Elavl4.}
 	\label{fig:pseudotime}
 \end{minipage}
 \end{figure}
@@ -132,7 +140,8 @@ Single-cell RNA-Seq data provide a detailed picture of the heterogeneity of
 gene expression within differentiating cell populations of the ENS.
 Gene expression profiles allow for the discriminative analysis of cell lineages
 and the detection of gene clusters. Time-dependent gene expression can be modelled
-as Gaussian Process, which provides an additional predictive dimension.
+as Gaussian Process, yielding a pseudo-temporal description of the underlying
+biological processes.
 \end{myblock}\vfill
 %______________________________________________________________________________
 \begin{myblock}{References}
