@@ -101,6 +101,24 @@ marker Tubb3 and the glial marker Erbb3.
 \begin{minipage}{.98\textwidth}
 \parbox[t][\columnheight]{\textwidth}{
 %______________________________________________________________________________
+\begin{myblock}{Heatmap of Gene Expression }
+A heatmap of gene expression shows four groups of cells with similar
+expression profiles and the blue-orange colour bar at the top indicates
+the marker expression gradient for each cell.
+From right to left: Glial cells, progenitor cells with high
+expression of all markers, neuronal cells and a small group with overall
+low marker expression.
+\begin{figure}
+\begin{minipage}{1.0\textwidth}
+	\includegraphics[width=1.0\textwidth]{./heatmap}
+	\caption{Heatmap of gene expression. Vertical white lines indicate groups
+			of cells with similar expression levels. Colours: grey=low,
+			yellow=medium, white=high.}
+	\label{fig:heatmap}
+\end{minipage}
+\end{figure}
+\end{myblock}\vfill
+%______________________________________________________________________________
 \begin{myblock}{Cross-Sectional Time Series}
 Bulk RNA-Seq data were collected for embryonic stages E11, E13 and E17 and
 for adult lineages RET, CHAT and NOS. A PCA plot resolves all stages/lineages
@@ -118,30 +136,11 @@ in the first three PC dimensions.
 \end{figure}
 \end{myblock}\vfill
 %______________________________________________________________________________
-\begin{myblock}{Pseudo-time Estimation}
-The temporal behaviour of gene expression can be modelled as a Gaussian Process,
-where a multivariate Gaussian is fitted to a given set of data
-within a Bayesian framework \cite{Reid_2016}. The examples in
-Fig.\ref{fig:pseudotime} illustrate the down-regulation of embryonic neuronal
-genes. The shade around the regression line indicates the prediction uncertainty.
-\begin{figure}
-\begin{minipage}{\textwidth}
-	\subfigure[Tubb3]{\includegraphics[width=0.5\textwidth]{./Tubb3_psitime}}
-	\subfigure[Elavl4]{\includegraphics[width=0.5\textwidth]{./Elavl4_psitime}}
-	\caption{Pseudo-time estimates of the single-cell expression profiles
-			of the marker genes (a) Tubb3 and (b) Elavl4.}
-	\label{fig:pseudotime}
-\end{minipage}
-\end{figure}
-\end{myblock}\vfill
-%______________________________________________________________________________
 \begin{myblock}{Conclusions}
 Single-cell RNA-Seq data provide a detailed picture of the heterogeneity of
 gene expression within differentiating cell populations of the ENS.
 Gene expression profiles allow for the discriminative analysis of cell lineages
-and the detection of gene clusters. Time-dependent gene expression can be modelled
-as Gaussian Process, yielding a pseudo-temporal description of the underlying
-biological processes.
+and the detection of gene clusters. 
 \end{myblock}\vfill
 %______________________________________________________________________________
 \begin{myblock}{References}
